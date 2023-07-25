@@ -4,11 +4,6 @@ import { useState } from "react";
 import { generatePrompts } from './utils/openai';
 import { Lato } from "next/font/google";
 
-export const title = Lato({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState<string>();
@@ -24,11 +19,6 @@ export default function Home() {
 
   return (
     <div className=" bg-bgcolor">
-      <Head>
-        <title>howlongshouldimicrowavethis?</title>
-        <link rel="icon" href="/microwave.svg" />
-      </Head>
-
       <main className=" w-screen h-screen flex justify-center">
         <div className="flex flex-col items-center">
           <img src="/microwave.svg" className=" w-28 h-28" />
