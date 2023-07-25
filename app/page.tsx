@@ -5,16 +5,18 @@ import { generatePrompts } from './utils/openai';
 import { Lato } from "next/font/google";
 
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState("");
+  const [foodInput, setFoodInput] = useState("");
   const [result, setResult] = useState<string>();
+  const [joke, setJoke] = useState<string>();
   const [effect, setEffect] = useState(false);
 
   async function onSubmit(event: any) {
     event.preventDefault();
-    const prompts = await generatePrompts('text-davinci-003s', animalInput);
+    const prompts = await generatePrompts('text-davinci-003s', foodInput);
 
-    setResult(prompts);
-    setAnimalInput("");
+    setResult(prompts?.content);
+    setFoodInput("");
+
   }
 
   return (
@@ -31,8 +33,8 @@ export default function Home() {
                 name="meal"
                 id="meal"
                 placeholder="Enter a meal"
-                value={animalInput}
-                onChange={(e) => setAnimalInput(e.target.value)}
+                value={foodInput}
+                onChange={(e) => setFoodInput(e.target.value)}
               />
               <button
                 className={`${
@@ -50,7 +52,7 @@ export default function Home() {
               </button>
             </form>
           </div>
-          <div className="">{result}</div>
+          <div className=" w-1/3 text-center bg-accent-100 border-teal-900 rounded-lg border-2">{result}</div>
         </div>
       </main>
     </div>
