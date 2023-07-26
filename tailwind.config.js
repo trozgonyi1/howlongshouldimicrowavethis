@@ -9,7 +9,10 @@ module.exports = {
   theme: {
     colors: {
       "foodpink":"#d7c7f0",
-      "bgcolor":"#e8f4d7",
+      "bgcolor": {
+        100: "#e8f4d7",
+        900: "#050505",
+      },
       "textcolor":{
         200: "#7a7f70",
         400: "#060802",
