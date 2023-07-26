@@ -19,7 +19,7 @@ export async function generatePrompts(model, prompt) {
       },
       {
         "role" : "system",
-        "content" : "Why did the pizza go to school? To get a little 'slice' of education and become a 'dough'-tor!"
+        "content" : "Why did the pizza go to school? To get a little 'slice' of education and become a 'dough'-tor! For a single slice of pizza, I'd say you need about 30 seconds to 1 minute in the microwave, depending on its size and thickness."
       },
       {
         "role" : "user",

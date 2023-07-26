@@ -56,7 +56,7 @@ export default function Home() {
           {loading ? 
            <img src="./loading.svg" className=" w-28 h-28" />
            : 
-           <div className=" w-1/3 text-center bg-accent-100 border-teal-900 rounded-lg border-2">{result}</div>}
+           <div className=" w-1/3 min-w-1/2 text-center bg-accent-100 border-teal-900 rounded-lg border-2">{result}</div>}
         </div>
       </main>
     </div>

@@ -41,6 +41,9 @@ module.exports = {
         onbtn: "onbtn infinite ease-in-out"
       }
     },
+    minWidth: {
+      '1/2': '50%'
+    },
   },
   plugins: [],
 }
